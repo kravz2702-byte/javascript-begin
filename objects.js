@@ -152,3 +152,113 @@ function updateRecords(id, prop, value){
 
 updateRecords(2468, "tracks", "tests")
 console.log(updateRecords(5349, "artist", "ABBA"));
+
+//iterate wuth loops
+
+var myArr =[];
+
+var i = 0;
+while(i<5) {
+    myArr.push(i);
+    i++;
+}
+console.log(myArr)
+
+// iterate with loop
+
+var ourArray = [];
+for (var i = 0; i < 5; i++){
+    ourArray.push(i);
+}
+
+console.log(ourArray);
+
+//iterate odd numbers with FOR LOOP
+
+var ourArray = [];
+
+for (var i =0; i < 10; i+=2){
+    ourArray.push(i);
+}
+
+console.log("Odd nums",ourArray);
+
+var ourArray =[];
+//count backwards wit a FOR LOOP
+for (i=10; i >0; i -=2){
+    ourArray.push(i);
+}
+
+console.log("Backward count", ourArray)
+
+//iterate through array with for loop
+
+var ourTotal = 0;
+
+for (var i = 0; i < ourArray.length; i++){
+    ourTotal += ourArray[i];
+}
+console.log(ourTotal);
+
+//Nesting for loops
+function multiplyAll(arr){
+    var product = 1;
+
+    for (var i=0; i<arr.length; i++){
+        for (var j=0; j<arr[i].length; j++){
+            product *= arr[i][j];
+        }
+    }
+
+    return product
+}
+
+var product = multiplyAll([[1,2], [3,4],[5,6,7]])
+console.log("PRODUCT",product)
+
+//Do while loop
+
+var myArray = [];
+var i = 10;
+
+do{
+    myArray.push(i);
+    i++;
+} while (i<5)
+
+console.log(i, myArray)
+
+//Profile lookup
+
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": '0512413412',
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "099123456",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {   "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0948732123",
+        "likes": ["Intriguing Cases", "Violin"]
+    }
+];
+
+function findProfile(name, prop){
+    for(var i = 0; i < contacts.length; i++){
+        if(contacts[i] === name){
+            return contacts[i][prop] || "No such property"
+        }
+    }
+}
+
+var data = findProfile("Akira", "lastName");
+console.log(data);
+
+
